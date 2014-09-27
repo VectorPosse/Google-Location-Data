@@ -1,5 +1,9 @@
+## From the Educate R blog
+## http://educate-r.org//2014/09/26/googlelocations/
+
+
 library(rjson)
-json_file <- "path/to/your/json/file"
+json_file <- "Takeout/LocationHistory.json"
 json_data <- fromJSON(file = json_file)
 latlong <- data.frame(do.call("rbind", json_data[[2]]))
 latlong2 <- subset(latlong, select = c(latitudeE7, longitudeE7))
